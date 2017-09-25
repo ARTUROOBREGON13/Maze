@@ -1,8 +1,8 @@
 module Maze where
--{
+{-
 Version 1.0 
 Modulo para la resolucion de caminos de laberintos
-}-
+-}
 
 --Localiza el inicio del laberinto marcado con una X y llama a la ruta para generar el conjunto de coordenadas a recorrer
 inicio::[[Char]]->Int->Int->[[Int]]
