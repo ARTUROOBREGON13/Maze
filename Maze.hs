@@ -32,3 +32,12 @@ lookLeft arr i j ant = if ((arr!!j!!(i-1))=='0' || (arr!!j!!(i-1))=='F') && ([(i
 lookRight::[[Char]]->Int->Int->[Int]->Bool
 lookRight arr i j ant = if ((arr!!j!!(i+1))=='0' || (arr!!j!!(i+1))=='F') && ([(i+1),j] /= ant) then True else False
 
+--Hallar Elemento F
+fin::[[Char]]->Int->Int->[Int]
+fin arr i j = if((arr!!j!!i) == 'F') then [i,j]
+                 else if i<((length (arr!!j))-1) then fin arr (i+1) j
+                      else fin arr 0 (j+1)
+                      
+hallarFin::[[Char]]->[Int]
+hallarFin arr = fin arr 0 0
+
